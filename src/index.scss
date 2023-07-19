@@ -1,0 +1,314 @@
+body {
+  height: 100%;
+  background: #0e1014;
+  color: #e4e5ea;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../public/images/purpleball.svg");
+  background-repeat: no-repeat;
+  background-position: right 580px top 0px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 311px;
+    height: 311px;
+    flex-shrink: 0;
+    border-radius: 311px;
+    opacity: 0.5;
+    top: 250px;
+    background: #961a1a;
+    filter: blur(196px);
+  }
+}
+
+.container {
+  max-width: 1740px;
+  padding: 46px 150px 0;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.header {
+  height: 73px;
+  background-image: url("../public/images/redball.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px left 380px;
+  padding-bottom: 110px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 259px;
+    height: 259px;
+    flex-shrink: 0;
+    border-radius: 259px;
+    opacity: 0.5;
+    right: 460px;
+    top: -150px;
+    background: #833ab4;
+    filter: blur(196px);
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__links {
+    display: flex;
+    img {
+      min-width: 20px;
+    }
+    ul {
+      display: flex;
+      li + li {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.phone {
+  margin-right: 47px;
+  color: #e4e5ea;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+.logo-block {
+  margin-right: 50px;
+  width: 165px;
+}
+.logo {
+  margin-bottom: 10px;
+  &__text {
+    color: #e4e5ea;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 300;
+  }
+}
+
+.menu {
+  margin-right: 137px;
+  &__list {
+    display: flex;
+    li + li {
+      margin-left: 30px;
+    }
+  }
+  &__list-link {
+    color: #e4e5ea;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.info {
+  padding: 40px 0 70px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../public/images/redballmin.svg");
+    background-repeat: no-repeat;
+    background-position: bottom -5px right 400px;
+  }
+}
+.tagline-block {
+  width: 362px;
+
+  &__title {
+    color: #e4e5ea;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  &__title.colorfull {
+    color: #e4e5ea;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+  }
+  &__text {
+    width: 275px;
+    color: #e4e5ea;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+.consult-block {
+  &__title {
+    width: 290px;
+    color: #e4e5ea;
+    text-align: right;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    span {
+      background: var(
+        --gradient,
+        linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+    }
+  }
+}
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  &__item {
+    max-width: 135px;
+  }
+  &__item-title {
+    color: #e4e5ea;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    text-align: right;
+  }
+  &__item-text {
+    color: #e4e5ea;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: right;
+  }
+}
+.consult__button {
+  background: #4077f3;
+  padding: 21px 35px;
+  width: 263px;
+  float: right;
+  a {
+    color: #e4e5ea;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.footer {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-menu {
+    display: flex;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      &:first-child {
+        margin-right: 98px;
+        width: 195px;
+      }
+      &:nth-child(2) {
+        margin-right: 52px;
+        width: 145px;
+      }
+      &:last-child {
+        width: 212px;
+        padding-top: 37px;
+      }
+      a + a {
+        margin-top: 10px;
+      }
+    }
+    &__title {
+      color: #656566;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    &__link {
+      display: inline-block;
+      color: #e4e5ea;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  &__links {
+    a + a {
+      margin-left: 10px;
+    }
+    margin-bottom: 20px;
+  }
+}
+.contacts {
+  text-align: right;
+  &__title {
+    color: #656566;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+.phone.footer {
+  margin-right: 0;
+  text-align: right;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.adress {
+  display: inline-block;
+  color: #e4e5ea;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 70px;
+}
+.rights {
+  color: #e4e5ea;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+}
+.policy {
+  color: #e4e5ea;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: underline !important;
+}
+@import "./media.scss";
